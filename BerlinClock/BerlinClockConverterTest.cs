@@ -5,6 +5,7 @@ namespace BerlinClock
 {
     public class BerlinClockConverterTest
     {
+        [Theory]
         [InlineData(0, 0, 0, "Y")]
         [InlineData(0, 0, 1, "O")]
         [InlineData(0, 0, 2, "Y")]
@@ -20,6 +21,7 @@ namespace BerlinClock
             Assert.Equal(expected, result.Row1);
         }
 
+        [Theory]
         [InlineData(0, 0, 0, "OOOO")]
         [InlineData(0, 1, 0, "YOOO")]
         [InlineData(0, 2, 0, "YYOO")]
@@ -36,6 +38,7 @@ namespace BerlinClock
             Assert.Equal(expected, result.Row5);
         }
 
+        [Theory]
         [InlineData(0, 0, 0, "OOOOOOOOOOO")]
         [InlineData(0, 5, 0, "YOOOOOOOOOO")]
         [InlineData(0, 6, 0, "YOOOOOOOOOO")]
@@ -53,6 +56,7 @@ namespace BerlinClock
             Assert.Equal(expected, result.Row4);
         }
 
+        [Theory]
         [InlineData(0, 0, 0, "OOOO")]
         [InlineData(1, 0, 0, "ROOO")]
         [InlineData(2, 0, 0, "RROO")]
@@ -69,6 +73,7 @@ namespace BerlinClock
             Assert.Equal(expected, result.Row3);
         }
 
+        [Theory]
         [InlineData(0, 0, 0, "OOOO")]
         [InlineData(5, 0, 0, "ROOO")]
         [InlineData(15, 0, 0, "RRRO")]
@@ -85,6 +90,7 @@ namespace BerlinClock
             Assert.Equal(expected, result.Row2);
         }
 
+        [Theory]
         [InlineData(0, 0, 0, "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO")]
         [InlineData(16, 50, 6, "Y\nRRRO\nROOO\nYYRYYRYYRYO\nOOOO")]
         [InlineData(23, 59, 59, "O\nRRRR\nRRRO\nYYRYYRYYRYY\nYYYY")]

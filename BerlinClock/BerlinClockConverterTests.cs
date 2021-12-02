@@ -3,7 +3,7 @@ using Xunit;
 
 namespace BerlinClock
 {
-    public class BerlinClockConverterTest
+    public class BerlinClockConverterTests
     {
         [Theory]
         [InlineData(0, 0, 0, "Y")]
